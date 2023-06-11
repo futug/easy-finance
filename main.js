@@ -42,7 +42,7 @@ for (let anchor of anchors) {
 }
 
 //   country__and__currency-check
-fetch("http://ip-api.com/json")
+fetch("https://ip-api.com/json")
 .then((response) => response.json())
 .then((data) => {
   const country = data.country;
