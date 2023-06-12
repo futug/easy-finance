@@ -515,7 +515,7 @@ body {
 }
 
 .how-works__tabs {
-    width: 100%;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 30px;
@@ -660,9 +660,12 @@ body {
 }
 
 .how-works__calc-selects {
+    align-content: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
+    gap: 45px;
+    flex-wrap: wrap;
 }
 select {
     display: block;
@@ -720,9 +723,11 @@ select:hover {
 
 .how-works__calc-ranges {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     margin-top: 30px;
+    gap: 75px;
+    flex-wrap: wrap;
 }
 
 .range-field {
@@ -760,9 +765,11 @@ select:hover {
 .how-works__calc-results {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 30px;
+    gap: 70px;
+    flex-wrap: wrap;
 }
 
 .how-works__result-message {
@@ -843,19 +850,21 @@ select:hover {
     left: 0;
     z-index: 2;
     border: 1px solid #403f3f;
+    transition: .2s ease-in-out;
   }
   
   .checkbox-label::after {
     content: '';
     width: 20px;
     height: 20px;
-    background: url('./img/icon-checked.svg') no-repeat;
+    background: url('../img/icon-checked.svg') no-repeat;
     background-size: 20px 20px;
     position: absolute;
     top: -1px;
     left: -1px;
     z-index: 2;
     opacity: 0;
+    transition: .2s opacity ease-in-out;
   }
   
   .how-works__privat-input {
@@ -864,16 +873,78 @@ select:hover {
     position: absolute;
   }
   
-  .how-works__privat-input:checked + .checkbox-label::before {
+  .how-works__privat-input:checked ~ .checkbox-label::before {
     background-color: #403f3f;
   }
   
-  .how-works__privat-input:checked + .checkbox-label::after {
+  .how-works__privat-input:checked ~ .checkbox-label::after {
     opacity: 1;
   }
+  
   
   .privat-policy {
     color: #0645AD;
     border-bottom: 1px solid #0645AD;
   }
   
+  .primary-button--disabled {
+    color: gray;
+    border-color: gray;
+    pointer-events: none;
+  }
+
+
+  @media (max-width: 1024px) {
+    .how-works__render-content {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        
+    }
+    .how-works__render-texts {
+        text-align: center;
+    }
+
+    .how-works__render-title {
+        margin: 0 auto;
+    }
+    .how-works__render-subtitle {
+        margin: 15px auto;
+
+    }
+}
+
+  @media (max-width: 768px) {
+    .how-works__tabs {
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, 2fr);
+        margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .title-group__title {
+        font-size: 36px;
+    }
+
+    .how-works__tabs-item {
+        font-size: 14px;
+    }
+
+    .how-works__render-title {
+        font-size: 36px;
+    }
+    .how-works__calc-choise-item {
+        font-size: 14px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .title-group__title {
+        font-size: 32px;
+    }
+    .how-works__render-title {
+        font-size: 32px;
+    }
+  }

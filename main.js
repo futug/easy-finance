@@ -42,7 +42,7 @@ for (let anchor of anchors) {
 }
 
 //   country__and__currency-check
-fetch("https://ip-api.com/json")
+fetch("http://ip-api.com/json")
 .then((response) => response.json())
 .then((data) => {
   const country = data.country;
@@ -235,15 +235,19 @@ function calculateMonthlyPayment() {
   
 
 // 
-
+const checkboxInput = document.querySelector('.how-works__privat-input');
 document.addEventListener('DOMContentLoaded', () => {
     calcSlideSumValue.textContent = calcSliderSum.value;
+    if (checkboxInput.checked === false) {
+        const contactCheckPrivicy = document.querySelector('.how-works__send-button').classList.add('primary-button--disabled');
+    }
 });
 
 
-const checkboxInput = document.querySelector('.how-works__privat-input');
+
 
 checkboxInput.addEventListener('click', () => {
   console.log('Checked:', checkboxInput.checked);
+  const contactCheckPrivicy = document.querySelector('.how-works__send-button').classList.toggle('primary-button--disabled');
 });
   
