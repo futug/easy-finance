@@ -205,7 +205,8 @@ body {
 }
 
 .header__run-row-inner > img {
-    width: 100px;
+    width: 200px;
+    height: 50px;
 }
 
 .about {
@@ -540,6 +541,7 @@ body {
     background-color: #000;
     color: #fff;
     z-index: 9;
+    
 }
 
 .how-works__render-content {
