@@ -250,4 +250,16 @@ checkboxInput.addEventListener('click', () => {
   console.log('Checked:', checkboxInput.checked);
   const contactCheckPrivicy = document.querySelector('.how-works__send-button').classList.toggle('primary-button--disabled');
 });
-  
+const menuWrapper = document.querySelector('.header__inner-top-wrapper');
+const siteLogo = document.querySelector('.header__logo-link');
+  (function () {
+    window.onscroll = () => {
+        if (window.pageYOffset > 30) {
+            siteLogo.classList.add('header__logo-link--active');
+            menuWrapper.classList.add('header__inner-top-wrapper--active');
+        } else {
+          siteLogo.classList.remove("header__logo-link--active");
+          menuWrapper.classList.remove('header__inner-top-wrapper--active');
+        }
+      };
+  })();
