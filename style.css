@@ -546,12 +546,13 @@ body {
     margin-top: 30px;
     background-color: #f8f8f8;
     position: relative;
+    
 }
 
 .how-works__tabs-item {
     align-self: center;
     justify-self: center;
-    padding: 15px;
+    padding: 15px 0;
     font-size: 18px;
     cursor: pointer;
     width: 100%;
@@ -565,7 +566,7 @@ body {
     background-color: #000;
     color: #fff;
     z-index: 9;
-    
+
 }
 
 .how-works__render-content {
@@ -919,6 +920,11 @@ select:hover {
     pointer-events: none;
   }
 
+  .rows-handler {
+    visibility: hidden;
+    display: none;
+  }
+
 
   @media (max-width: 1024px) {
     .how-works__render-content {
@@ -961,9 +967,12 @@ select:hover {
     .how-works__render-title {
         font-size: 36px;
     }
-    .how-works__calc-choise-item {
+    .how-works__calc-choise-item > p{
         font-size: 14px;
+        word-wrap: break-word;
     }
+
+    
   }
 
   @media (max-width: 375px) {
@@ -972,5 +981,8 @@ select:hover {
     }
     .how-works__render-title {
         font-size: 32px;
+    }
+    .rows-handler {
+        display: block;
     }
   }
