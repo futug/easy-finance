@@ -110,11 +110,13 @@ body {
 
 .header__inner-main {
     /* width: 100%; */
+    /* height: 100vh; */
 }
+
 
 .header__main-content {
     background: url("./img/hero-bg.png") no-repeat right bottom;
-
+    /* height: 100vh; */
     position: relative;
 }
 
