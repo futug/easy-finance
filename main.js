@@ -30,6 +30,19 @@ const defaultAttributes = {
 const anchors = document.querySelectorAll('a[href*="#"]');
 const menuWrapper = document.querySelector('.header__inner-top-wrapper');
 const siteLogo = document.querySelector('.header__logo-link');
+const langChoise = document.querySelectorAll('.header__lang');
+
+
+langChoise.forEach((el) => {
+    el.addEventListener('click', (event) => {
+        langChoise.forEach((el) => {
+            el.classList.remove('choisen');
+        });
+        event.currentTarget.classList.add('choisen');
+    });
+});
+
+
 
 // smoothanchor scroll
 for (let anchor of anchors) {
@@ -42,6 +55,82 @@ for (let anchor of anchors) {
     });
   });
 }
+
+// fetch('https://futug.github.io/easy-finance/rusTexts.json')
+// .then((response) => response.json())
+// .then((data) => {
+//     var objRus = data;
+//     console.log(objRus);
+// })
+// .catch((error) => {
+//     console.log('fetching error');
+// });
+
+fetch('https://futug.github.io/easy-finance/engTexts.json')
+.then((response) => response.json())
+.then((data) => {
+    var objEng = data;
+    console.log(objEng);
+    const transElements = document.querySelectorAll('.trans');
+
+    langChoise.forEach((el) => {
+      el.addEventListener('click', (event) => {
+        const targetElement = event.currentTarget;
+
+        if (targetElement.classList.contains('eng') && targetElement.classList.contains('choisen')) {
+          transElements.forEach((element, index) => {
+            element.innerText = objEng['text_' + index];
+          });
+        } else {
+          console.log('&&&');
+        }
+      });
+    });
+})
+.catch((error) => {
+    console.log('fetching error');
+});
+
+fetch('https://futug.github.io/easy-finance/rusTexts.json')
+  .then((response) => response.json())
+  .then((data) => {
+    var objRus = data;
+    console.log(objRus);
+
+    const transElements = document.querySelectorAll('.trans');
+
+    langChoise.forEach((el) => {
+      el.addEventListener('click', (event) => {
+        const targetElement = event.currentTarget;
+
+        if (targetElement.classList.contains('ru') && targetElement.classList.contains('choisen')) {
+          transElements.forEach((element, index) => {
+            element.innerText = objRus['text_' + index];
+          });
+        } else {
+          console.log('&&&');
+        }
+      });
+    });
+  })
+  .catch((error) => {
+    console.log('fetching error');
+  });
+
+langChoise.forEach((el) => {
+  el.addEventListener('click', (event) => {
+    const targetElement = event.currentTarget;
+
+    if (targetElement.classList.contains('ru') && targetElement.classList.contains('choisen')) {
+      console.log("!!!");
+    } else {
+      console.log('&&&');
+    }
+  });
+});
+
+
+
 
 //   country__and__currency-check
 fetch("http://ip-api.com/json")

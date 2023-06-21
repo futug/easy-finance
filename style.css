@@ -18,6 +18,9 @@ body {
     background-color: #fff;
 }
 
+.choisen {
+    color: red;
+}
 .header__logo-link {
     width: 220px;
     overflow: hidden;
@@ -88,6 +91,7 @@ body {
     justify-content: end;
     align-items: center;
     gap: 5px;
+
 }
 
 .header__lang-choise > span {
@@ -97,6 +101,7 @@ body {
     margin-top: 20px;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 .header__lang:hover {
