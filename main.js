@@ -15,8 +15,7 @@ const calcSliderSum = document.querySelector(".creditSum");
 const calcSlideSumValue = document.querySelectorAll(".range__slider-value > span");
 const calcSliderPercent = document.querySelector(".creditPercent");
 const calcSliderPeriod = document.querySelector(".creditPeriod");
-const uniqOffers = document.querySelector(".uniq-offers");
-const monthlyPayment = document.querySelector(".monthly-payment");
+
 const calcCurrency = document.querySelector('.loan-currency');
 const creditTypeSelect = document.querySelector('.credit-type');
 const sumRangeStartPosition = document.querySelector('.start-point');
@@ -222,6 +221,8 @@ function calculateMonthlyPayment() {
     const P = parseFloat(calcSliderPercent.value) / 100;
     const N = parseFloat(calcSliderPeriod.value) * 12;
     let totalPayment = 0;
+    const uniqOffers = document.querySelector(".uniq-offers");
+const monthlyPayment = document.querySelector(".monthly-payment");
   
     if (calcTabs[0].classList.contains("how-works__calc-choise-item--active")) {
       const Se = Math.ceil((S * P / 12 * Math.pow((1 + P / 12), N)) / (Math.pow((1 + P / 12), N) - 1));
