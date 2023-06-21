@@ -66,70 +66,6 @@ for (let anchor of anchors) {
 //     console.log('fetching error');
 // });
 
-fetch('https://futug.github.io/easy-finance/engTexts.json')
-.then((response) => response.json())
-.then((data) => {
-    var objEng = data;
-    console.log(objEng);
-    const transElements = document.querySelectorAll('.trans');
-
-    langChoise.forEach((el) => {
-      el.addEventListener('click', (event) => {
-        const targetElement = event.currentTarget;
-
-        if (targetElement.classList.contains('eng') && targetElement.classList.contains('choisen')) {
-          transElements.forEach((element, index) => {
-            element.innerText = objEng['text_' + index];
-          });
-        } else {
-          console.log('&&&');
-        }
-      });
-    });
-})
-.catch((error) => {
-    console.log('fetching error');
-});
-
-fetch('https://futug.github.io/easy-finance/rusTexts.json')
-  .then((response) => response.json())
-  .then((data) => {
-    var objRus = data;
-    console.log(objRus);
-
-    const transElements = document.querySelectorAll('.trans');
-
-    langChoise.forEach((el) => {
-      el.addEventListener('click', (event) => {
-        const targetElement = event.currentTarget;
-
-        if (targetElement.classList.contains('ru') && targetElement.classList.contains('choisen')) {
-          transElements.forEach((element, index) => {
-            element.innerText = objRus['text_' + index];
-          });
-        } else {
-          console.log('&&&');
-        }
-      });
-    });
-  })
-  .catch((error) => {
-    console.log('fetching error');
-  });
-
-langChoise.forEach((el) => {
-  el.addEventListener('click', (event) => {
-    const targetElement = event.currentTarget;
-
-    if (targetElement.classList.contains('ru') && targetElement.classList.contains('choisen')) {
-      console.log("!!!");
-    } else {
-      console.log('&&&');
-    }
-  });
-});
-
-
 
 
 //   country__and__currency-check
@@ -375,3 +311,82 @@ function scrollLoop() {
 //         document.querySelector('body').innerHTML = mainPageDefault;
 //     })
 // })
+
+// LANGUAGE-CHOISE
+fetch('https://futug.github.io/easy-finance/engTexts.json')
+.then((response) => response.json())
+.then((data) => {
+    var objEng = data;
+    console.log(objEng);
+    const transElements = document.querySelectorAll('.trans');
+
+    langChoise.forEach((el) => {
+      el.addEventListener('click', (event) => {
+        const targetElement = event.currentTarget;
+
+        if (targetElement.classList.contains('eng') && targetElement.classList.contains('choisen')) {
+          transElements.forEach((element, index) => {
+            element.innerText = objEng['text_' + index];
+          });
+          const resultString = document.querySelector('.how-works__calc-results');
+          resultString.innerHTML = '';
+          resultString.innerHTML = '<p class="how-works__result-message trans">' +
+            'Based on your criteria, we have selected <span class="uniq-offers">7</span> unique offers for you with a monthly payment of ' +
+            '<span class="monthly-payment">1510₽</span>. Proceed to step 3 to get the money!' +
+            '</p>' + '<a class="how-works__calc-cta primary-button trans" href="#finalstep">' +'Proceed!' + '</a>';
+        } else {
+          console.log('&&&');
+        }
+      });
+    });
+})
+.catch((error) => {
+    console.log('fetching error');
+});
+
+fetch('https://futug.github.io/easy-finance/rusTexts.json')
+  .then((response) => response.json())
+  .then((data) => {
+    var objRus = data;
+    console.log(objRus);
+
+    const transElements = document.querySelectorAll('.trans');
+
+    langChoise.forEach((el) => {
+      el.addEventListener('click', (event) => {
+        const targetElement = event.currentTarget;
+
+        if (targetElement.classList.contains('ru') && targetElement.classList.contains('choisen')) {
+          transElements.forEach((element, index) => {
+            element.innerText = objRus['text_' + index];
+          });
+          const resultString = document.querySelector('.how-works__calc-results');
+          resultString.innerHTML = '';
+          resultString.innerHTML = '<p class="how-works__result-message trans">' +
+            'По вашим критериям подобрали вам <span class="uniq-offers">7</span> уникальных предложений, с ежемесячным платежом от ' +
+            '<span class="monthly-payment">1510₽</span>, перейдите к шагу 3, чтобы получить деньги!' +
+            '</p>' + '<a class="how-works__calc-cta primary-button trans" href="#finalstep">' +'Перейти!' + '</a>';
+          
+        } else {
+          console.log('&&&');
+        }
+      });
+    });
+  })
+  .catch((error) => {
+    console.log('fetching error');
+  });
+
+// langChoise.forEach((el) => {
+//   el.addEventListener('click', (event) => {
+//     const targetElement = event.currentTarget;
+
+//     if (targetElement.classList.contains('ru') && targetElement.classList.contains('choisen')) {
+      
+//     } else {
+//       console.log('&&&');
+//     }
+//   });
+// });
+
+
