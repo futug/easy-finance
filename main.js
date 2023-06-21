@@ -254,7 +254,11 @@ checkboxInput.addEventListener('click', () => {
 });
 
 
-window.addEventListener("DOMContentLoaded", scrollLoop, false);
+window.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth >= 1440) {
+        scrollLoop();
+    }
+}, false);
 
 var xScrollPosition;
 var yScrollPosition;
@@ -273,3 +277,12 @@ function scrollLoop() {
 
     requestAnimationFrame(scrollLoop);
 }
+
+// const mainPageDefault = document.querySelector('body').innerHTML;
+
+// document.querySelector('.feedback__story-card').addEventListener('click', () => {
+//     document.querySelector('body').innerHTML = "<p>back</p>";
+//     document.querySelector("p").addEventListener('click', () => {
+//         document.querySelector('body').innerHTML = mainPageDefault;
+//     })
+// })

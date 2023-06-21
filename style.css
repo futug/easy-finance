@@ -1060,7 +1060,8 @@ select:hover {
     align-items: center;
     margin-top: 60px;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 45px;
+    padding-bottom: 60px;
 }
   .feedback__card-name {
     font-size: 21px;
@@ -1075,8 +1076,8 @@ select:hover {
   .feedback__story-card {
     width: 320px;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
     align-items: center;
     padding: 15px;
     z-index: 1;
@@ -1087,12 +1088,102 @@ select:hover {
     width: 100%;
     background: url('./img/new-apartments.webp') no-repeat center /cover;
   }
+  .feedback__story-card:nth-child(2) .feedback__story-photo {
+    background: url('./img/story__bg-2.jpeg') no-repeat center /cover;
+}
 
+.feedback__story-card:nth-child(3) .feedback__story-photo {
+    background: url('./img/story__bg-3.jpeg') no-repeat center /cover;
+}
   .feedback__story-subtitle  {
     margin-top: 15px;
   }
-
+.feedback__interactive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
   .feedback__story-btn {
+   
+    font-size: 16px;
+    align-self: start;
+    justify-self: start;
+  }
+
+  .interactive-ico {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    align-self: center;
+    filter: grayscale(100%);
+    transition: .4s fill ease-in-out;
+  }
+
+  .interactive-ico:hover,
+  .interactive-ico:hover* {
+    filter: none;
+  }
+
+
+  .footer {
+  }
+
+  .footer__logo > p {
+    max-width: 500px;
+    
+  }
+  .footer__content {
+    display:grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items:center;
+    list-style: none;
+    padding: 60px 20px;
+  }
+
+  .footer__nav > ul {
+    list-style: none;
+  }
+
+
+  .footer-btn {
     margin-top: 15px;
     font-size: 16px;
+    align-self: start;
+    justify-self: start;
+  }
+
+  .footer__inform-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer__inform-container > p {
+    font-size: 12px;
+   
+  }
+
+  .footer__interactive > p {
+    color: #0645AD;
+    border-bottom: 1px solid #0645AD;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  @media (max-width: 1024px) {
+    .footer__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+    .footer__inform-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__inform-container > p {
+        text-align: center;
+    }
   }
