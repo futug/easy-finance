@@ -7,36 +7,38 @@
         <link rel="stylesheet" href="reset.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" /> -->
+        <link rel="stylesheet" href="fonts.css">
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles-min.css">
         <script src="main.js" defer></script>
         <title>Easy finance - best finance solutions</title>
     </head>
     <body>
-        <div class="header__inner-top" >
-            <div class="header__inner-top-wrapper container">
-                <a class="header__logo-link" href="#home">
-                    <!-- <img class="header__logo-pic" src="./img/logo.svg" alt="company logo" /> -->
-                </a>
-                <nav class="header__nav">
-                    <ul>
-                        <li class="header__nav-item"><a class="header__nav-item-link trans" href="#about">О нас</a></li>
-                        <li class="header__nav-item"><a class="header__nav-item-link trans" href="#products">Услуги</a></li>
-                        <li class="header__nav-item"><a class="header__nav-item-link trans" href="#howDoesitWorks">Как это работает?</a></li>
-                        <li class="header__nav-item"><a class="header__nav-item-link trans" href="#achievments">Достижения</a></li>
-                        <li class="header__nav-item"><a class="header__nav-item-link trans" href="#contacts">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="burger-menu">
-                    <div class="burger-menu__item"></div>
-                    <div class="burger-menu__item"></div>
-                    <div class="burger-menu__item"></div>
-                    <div class="burger-menu__item-horizont"></div>
-                    <div class="burger-menu__item-horizont"></div>
+       
+        <header class="header" id="home">
+            <div class="header__inner-top" >
+                <div class="header__inner-top-wrapper container">
+                    <a class="header__logo-link" href="#home">
+                    </a>
+                    <nav class="header__nav">
+                        <ul>
+                            <li class="header__nav-item"><a class="header__nav-item-link trans" href="#about">О нас</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link trans" href="#products">Услуги</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link trans" href="#howDoesitWorks">Как это работает?</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link trans" href="#achievments">Достижения</a></li>
+                            <li class="header__nav-item"><a class="header__nav-item-link trans" href="#contacts">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="burger-menu">
+                        <div class="burger-menu__item"></div>
+                        <div class="burger-menu__item"></div>
+                        <div class="burger-menu__item"></div>
+                        <div class="burger-menu__item-horizont"></div>
+                        <div class="burger-menu__item-horizont"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <header class="header" id="home">
             <div class="header__inner-wrapper">
                 <div class="header__inner-texts">
                     <div class="header__lang-choise container">
@@ -389,7 +391,11 @@
                             Очень давно была идея ремонта квартиры и наконец решили ее воплотить. Но как всегда не рассчитали бюджет, да еще и бригада выполнявшая ремонт просчиталась со сметой, в итоге пришлось экстренно искать деньги. На помщь пршли ребята из Easy. Все как по нотам! Расчитал на сайте, отправил заявку, менеджер связался со мной через 15 минут, описал все доступные и самые выгодные предложения, а еще через час деньги уже поступили на мою банковскую карту! Спасибо Easy Finance!
                         </p>
                         <div class="feedback__card-photo">
-                            <img src="./img/feedback__userpic.png" alt="customer photo" class="feedback__card-photo-img">
+                            <picture class="feedback__card-photo-img">
+                                <source src="./img/feedback__userpic.webp" type="image/webp">
+                                <source src="./img/feedback__userpic.png" type="image/png">
+                                <img src="./img/feedback__userpic.webp" alt="customer photo" class="feedback__card-photo-img">
+                            </picture>
                             <div class="feedback__card-photo-text">
                                 <p class="feedback__card-name">Копылев Олег</p>
                                 <p class="feeadback__card-sum">300 000 руб.</p>
@@ -401,7 +407,11 @@
                             Очень давно была идея ремонта квартиры и наконец решили ее воплотить. Но как всегда не рассчитали бюджет, да еще и бригада выполнявшая ремонт просчиталась со сметой, в итоге пришлось экстренно искать деньги. На помщь пршли ребята из Easy. Все как по нотам! Расчитал на сайте, отправил заявку, менеджер связался со мной через 15 минут, описал все доступные и самые выгодные предложения, а еще через час деньги уже поступили на мою банковскую карту! Спасибо Easy Finance!
                         </p>
                         <div class="feedback__card-photo">
-                            <img src="./img/feedback__userpic.png" alt="customer photo" class="feedback__card-photo-img">
+                            <picture class="feedback__card-photo-img">
+                                <source src="./img/feedback__userpic.webp" type="image/webp">
+                                <source src="./img/feedback__userpic.png" type="image/png">
+                                <img src="./img/feedback__userpic.webp" alt="customer photo" class="feedback__card-photo-img">
+                            </picture>
                             <div class="feedback__card-photo-text">
                                 <p class="feedback__card-name">Копылев Олег</p>
                                 <p class="feeadback__card-sum">300 000 руб.</p>
@@ -413,7 +423,11 @@
                             Очень давно была идея ремонта квартиры и наконец решили ее воплотить. Но как всегда не рассчитали бюджет, да еще и бригада выполнявшая ремонт просчиталась со сметой, в итоге пришлось экстренно искать деньги. На помщь пршли ребята из Easy. Все как по нотам! Расчитал на сайте, отправил заявку, менеджер связался со мной через 15 минут, описал все доступные и самые выгодные предложения, а еще через час деньги уже поступили на мою банковскую карту! Спасибо Easy Finance!
                         </p>
                         <div class="feedback__card-photo">
-                            <img src="./img/feedback__userpic.png" alt="customer photo" class="feedback__card-photo-img">
+                            <picture class="feedback__card-photo-img">
+                                <source src="./img/feedback__userpic.webp" type="image/webp">
+                                <source src="./img/feedback__userpic.png" type="image/png">
+                                <img src="./img/feedback__userpic.webp" alt="customer photo" class="feedback__card-photo-img">
+                            </picture>
                             <div class="feedback__card-photo-text">
                                 <p class="feedback__card-name">Копылев Олег</p>
                                 <p class="feeadback__card-sum">300 000 руб.</p>
@@ -425,7 +439,11 @@
                             Очень давно была идея ремонта квартиры и наконец решили ее воплотить. Но как всегда не рассчитали бюджет, да еще и бригада выполнявшая ремонт просчиталась со сметой, в итоге пришлось экстренно искать деньги. На помщь пршли ребята из Easy. Все как по нотам! Расчитал на сайте, отправил заявку, менеджер связался со мной через 15 минут, описал все доступные и самые выгодные предложения, а еще через час деньги уже поступили на мою банковскую карту! Спасибо Easy Finance!
                         </p>
                         <div class="feedback__card-photo">
-                            <img src="./img/feedback__userpic.png" alt="customer photo" class="feedback__card-photo-img">
+                            <picture class="feedback__card-photo-img">
+                                <source src="./img/feedback__userpic.webp" type="image/webp">
+                                <source src="./img/feedback__userpic.png" type="image/png">
+                                <img src="./img/feedback__userpic.webp" alt="customer photo" class="feedback__card-photo-img">
+                            </picture>
                             <div class="feedback__card-photo-text">
                                 <p class="feedback__card-name">Копылев Олег</p>
                                 <p class="feeadback__card-sum">300 000 руб.</p>
@@ -469,7 +487,6 @@
         <footer class="footer">
             <div class="footer__content container">
                 <div class="footer__logo footer__inform-container"> <a class="header__logo-link" href="#home">
-                    <img class="header__logo-pic" src="./img/logo.svg" alt="company logo" />
                 </a>
                 <p class="trans">Центр кредитования Easy-finance оказывает помощь в получении кредита наличными, ипотеки, кредита под залог на самых выгодных условиях ДЛЯ ВАС. Данный сайт носит исключительно информационный характер, размещенные на сайте материалы не являются публичной офертой, определяемой положениями Статей 435 и 437 Гражданского кодекса РФ.</p>
                 <p class="trans">Все права защищены.  </p>

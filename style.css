@@ -44,10 +44,6 @@ body {
     width: 45px;
 }
 
-/* .header__logo-pic {
-    width: 220px;
-    height: 50px;
-} */
 .header__inner-top--active {
     border-bottom: 1px solid #3478a9;
 }
@@ -115,7 +111,7 @@ body {
 }
 
 main {
-    z-index: 800;
+    z-index: 1;
     position: relative;
 }
 
@@ -163,20 +159,14 @@ footer {
     z-index: 5;
 }
 
-.header__inner-main {
-    /* width: 100%; */
-    /* height: 100vh; */
-}
 
 
 .header__main-content {
     background: url("./img/hero-bg.png") no-repeat right bottom;
-    /* height: 100vh; */
     position: relative;
 }
 
 .header__main-title {
-    /* max-width: 650px; */
     font-size: 68px;
     font-weight: 700;
     text-align: center;
@@ -184,16 +174,7 @@ footer {
     line-height: 100%;
     margin-top: 90px;
 }
-/* .header__main-title > span::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 40%;
-    top: 40%;
-    left: 0;
-    background-color: #de5555;
-    z-index: -1;
-} */
+
 
 .header__main-subtitle {
     font-size: 24px;
@@ -308,6 +289,7 @@ footer {
 
 .about {
     background-color: #f8f8f8;
+    background: url('./img/support-svgrepo-com.svg') no-repeat right bottom/500px 500px, #f8f8f8;
 }
 
 .circle {
@@ -617,7 +599,6 @@ footer {
 }
 
 .how-works__tabs {
-    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 30px;
@@ -681,9 +662,6 @@ footer {
     object-fit: cover;
 }
 
-.how-works__calc {
-    /* margin-top: 60px; */
-}
 .how-works__calc-choise {
     margin-top: 60px;
     display: flex;
@@ -1092,14 +1070,13 @@ select:hover {
     width: 100px;
     border: 4px solid #fff;
     border-radius: 50%;
-    transform: scale(.5);
+    transform: scale(.8);
   }
   .feedback__card {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     position: relative;
     width: fit-content;
     padding: 30px;
@@ -1157,14 +1134,14 @@ select:hover {
   .feedback__story-photo {
     min-height: 150px;
     width: 100%;
-    background: url('./img/new-apartments.webp') no-repeat center /cover;
+    background: url('./img/new-apartments.webp') no-repeat center /cover, url('./img/new-apartments.jpeg') no-repeat center /cover;
   }
   .feedback__story-card:nth-child(2) .feedback__story-photo {
-    background: url('./img/story__bg-2.jpeg') no-repeat center /cover;
+    background: url('./img/story__bg-2.webp') no-repeat center /cover, url('./img/story__bg-2.jpeg') no-repeat center /cover;
 }
 
 .feedback__story-card:nth-child(3) .feedback__story-photo {
-    background: url('./img/story__bg-3.jpeg') no-repeat center /cover;
+    background: url('./img/story__bg-3.webp') no-repeat center /cover, url('./img/story__bg-3.jpeg') no-repeat center /cover;
 }
   .feedback__story-subtitle  {
     margin-top: 15px;
@@ -1184,7 +1161,7 @@ select:hover {
 
   .interactive-ico {
     width: 40px;
-    height: auto;
+    height: 40px;
     cursor: pointer;
     align-self: center;
     filter: grayscale(100%);
