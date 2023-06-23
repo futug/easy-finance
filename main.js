@@ -304,14 +304,7 @@ function scrollLoop() {
     requestAnimationFrame(scrollLoop);
 }
 
-// const mainPageDefault = document.querySelector('body').innerHTML;
 
-// document.querySelector('.feedback__story-card').addEventListener('click', () => {
-//     document.querySelector('body').innerHTML = "<p>back</p>";
-//     document.querySelector("p").addEventListener('click', () => {
-//         document.querySelector('body').innerHTML = mainPageDefault;
-//     })
-// })
 
 // LANGUAGE-CHOISE
 fetch('https://futug.github.io/easy-finance/engTexts.json')
@@ -378,16 +371,154 @@ fetch('https://futug.github.io/easy-finance/rusTexts.json')
     console.log('fetching error');
   });
 
-// langChoise.forEach((el) => {
-//   el.addEventListener('click', (event) => {
-//     const targetElement = event.currentTarget;
+// ROUTING
+const mainPageDefault = document.querySelector('main').innerHTML;
 
-//     if (targetElement.classList.contains('ru') && targetElement.classList.contains('choisen')) {
-      
-//     } else {
-//       console.log('&&&');
-//     }
-//   });
-// });
+document.querySelectorAll('.interactive-ico').forEach((el, index) => {
+  el.addEventListener('click', () => {
+    document.querySelector('.header__inner-wrapper').style.display = "none";
+    if (index === 0) {
+    document.querySelector('main').innerHTML = ` <div class="story-content container">
+    <div class="bread-crumps">
+                        <a href="/index">
+                            Главная
+                        </a>
+                        <span>></span>
+                        <a href="#" class="active-rout">Ипотека семьи Олобихиных</a>
+                    </div>
+    <div class="title-group">
+        <p class="title-group__pretitle trans">_Как именно вы помогли?</p>
+        <h2 class="title-group__title trans">Истории наших клиентов</h2>
+        <p class="title-group__subtitle trans">Послушайте истории наших клиентов!</p>
+    </div>
+    <div class="story-content__item">
+        <div class="story-content__interactive-group">
+            <img srcset="./img/family-photo-mortgage.webp, ./img/family-photo-mortgage.png" 
+            src="./img/family-photo-mortgage.webp" 
+            alt="family photo" 
+            class="story-photo">
+            <p class="story-content__photo-description">
+                Семья Олобихиных, обратились в EF для получения лучшего предложения для улучшения жилищных условий. Полученный продукт - 2 млн 750тыс под 5.7%
+            </p>
+            <a href="#" class="primary-button story-content__btn">Я тоже так хочу!</a>
+        </div>
+        <div class="story-content__textcontent">
+            <div class="blog-titles">
+                <p class="how-works__step-title blog-title">Семья Олобихиных.</p>
+                <p class="how-works__step-subtitle blog-subtitle">Ипотека на улучшение жилищных условий.</p>
+            </div>
+            <p class="story-article">Меня зовут Иван, и я хочу поделиться с вами нашим опытом с компанией Easy Finance. Я и моя жена Марина мечтали о просторном доме для нашей семьи, ведь у нас трое замечательных детей: старший сын Антон, младший сын Михаил и наша маленькая дочь Вера.
+
+                Изучая возможности решения нашей проблемы с теснотой в нашей старой квартире, мы обратили внимание на компанию Easy Finance. Их онлайн-сервис позволяет подобрать ипотечные продукты, не требуя личной встречи с консультантом.
+                
+                Мы были приятно удивлены уровнем профессионализма и качеством обслуживания, которые предоставила нам компания Easy Finance. Первым шагом было заполнение подробного онлайн-вопросника, где мы указали наши предпочтения и финансовые возможности.
+                
+                После этого мы получили доступ к широкому выбору ипотечных продуктов различных банков и финансовых учреждений. Нам предоставили информацию о различных условиях и процентах по кредитам, что помогло нам сравнить и выбрать наиболее подходящий вариант.
+                
+                Оформление ипотечного кредита было простым и удобным благодаря интуитивно понятному онлайн-интерфейсу Easy Finance. Мы заполнили необходимые документы и отслеживали прогресс нашей заявки через личный кабинет. Весь процесс был прозрачным, и мы получали своевременную информацию от компании.
+                
+                Благодаря помощи Easy Finance, мы смогли приобрести просторную пятикомнатную квартиру в Казани, которая стала идеальным жилищем для нашей семьи. Мы благодарны компании за их профессионализм, удобный онлайн-сервис и возможность реализовать нашу мечту о просторном жилье.
+                
+                Easy Finance действительно сделала процесс подбора ипотечного кредита легким и удобным, и мы рекомендуем их услуги всем, кто ищет оптимальное решение для своего жилищного вопроса.
+            </p>
+        </div>
+    </div>
+</div>`; 
+    } else if (index === 1) {
+      document.querySelector('main').innerHTML = ` <div class="story-content container">
+      <div class="bread-crumps">
+                        <a href="/index">
+                            Главная
+                        </a>
+                        <span>></span>
+                        <a href="#" class="active-rout">Студия звукозаписи Korotkin - г.Тверь</a>
+                    </div>
+      <div class="title-group">
+          <p class="title-group__pretitle trans">_Как именно вы помогли?</p>
+          <h2 class="title-group__title trans">Истории наших клиентов</h2>
+          <p class="title-group__subtitle trans">Послушайте истории наших клиентов!</p>
+      </div>
+      <div class="story-content__item">
+          <div class="story-content__interactive-group">
+              <img srcset="./img/photo-record-studio.webp, ./img/photo-record-studio.jpeg" 
+              src="./img/photo-record-studio.webp" 
+              alt="family photo" 
+              class="story-photo">
+              <p class="story-content__photo-description">
+                  Игорь Короткин, обратился в EF для получения лучшего предложения для покупки нового оборудования для своей студии звукозаписи. Полученный продукт - 1млн 100тыс под 10.3%
+              </p>
+              <a href="#" class="primary-button story-content__btn">Я тоже так хочу!</a>
+          </div>
+          <div class="story-content__textcontent">
+              <div class="blog-titles">
+                  <p class="how-works__step-title blog-title">Игорь Короткин.</p>
+                  <p class="how-works__step-subtitle blog-subtitle">Обновление парка оборудования в собственной студии звукозаписи.</p>
+              </div>
+              <p class="story-article">
+              Меня зовут Игорь Короткин, и я хочу поделиться своей историей о том, как компания Easy Finance помогла мне обновить оборудование в моей студии звукозаписи. Я уже много лет работаю в музыкальной индустрии и владею своей собственной студией, но столкнулся с проблемой устаревания и выхода из строя оборудования.
+
+              Как владельцу малого бизнеса, я знаю, насколько трудно поддерживать современный уровень оборудования в индустрии, которая постоянно развивается. Каждый год новые технологии и инструменты выходят на рынок, и чтобы оставаться конкурентоспособным, нужно постоянно обновлять и улучшать свое оборудование.
+              
+              Именно в этот момент я обратился к компании Easy Finance, чтобы получить финансирование для обновления оборудования в моей студии. Что меня приятно удивило, так это то, что весь процесс проходит онлайн, без необходимости личной встречи с консультантом. Для занятого предпринимателя, как я, это было идеальным решением.
+              
+              Первым шагом было заполнение подробного онлайн-вопросника, где я указал свои финансовые потребности и предпочтения. Easy Finance предоставил мне доступ к широкому выбору кредитных продуктов различных банков и финансовых учреждений. Я смог ознакомиться с различными условиями и процентными ставками, чтобы выбрать наиболее подходящий вариант для моего бизнеса.
+              
+              Оформление кредита было очень простым и удобным благодаря интуитивно понятному онлайн-интерфейсу Easy Finance. Я заполнил необходимые документы и отслеживал прогресс своей заявки через личный кабинет. Вся информация была предоставлена мне своевременно, и я всегда был в курсе текущего состояния процесса.
+              
+              Благодаря помощи Easy Finance, я смог получить кредит на сумму 1 миллион 100 тысяч рублей под 10.3% годовых. Эти средства позволили мне приобрести новое оборудов
+              </p>
+          </div>
+      </div>
+    </div>`;
+    } else if (index === 2 ) {
+      document.querySelector('main').innerHTML = ` <div class="story-content container">
+      <div class="bread-crumps">
+                        <a href="/index">
+                            Главная
+                        </a>
+                        <span>></span>
+                        <a href="#" class="active-rout">Зульфия Губайдулинна - кредит на образование</a>
+                    </div>
+      <div class="title-group">
+          <p class="title-group__pretitle trans">_Как именно вы помогли?</p>
+          <h2 class="title-group__title trans">Истории наших клиентов</h2>
+          <p class="title-group__subtitle trans">Послушайте истории наших клиентов!</p>
+      </div>
+      <div class="story-content__item">
+          <div class="story-content__interactive-group">
+              <img srcset="./img/photo-student-story.webp, ./img/photo-student-story.jpeg" 
+              src="./img/photo-student-story.webp" 
+              alt="family photo" 
+              class="story-photo">
+              <p class="story-content__photo-description">
+                  Зульфия Губайдулинна (по центру), обратилась за получением образовательной ссуды для поступления в СПБГУ. Получила ссуду 780 тыс. руб. на льготных условиях под 1.4%.
+              </p>
+              <a href="#" class="primary-button story-content__btn">Я тоже так хочу!</a>
+          </div>
+          <div class="story-content__textcontent">
+              <div class="blog-titles">
+                  <p class="how-works__step-title blog-title">Зульфия Губайдулинна.</p>
+                  <p class="how-works__step-subtitle blog-subtitle">Образовательный кредит.</p>
+              </div>
+              <p class="story-article">
+              Меня зовут Зульфия Губайдулина, и я хочу рассказать свою историю о том, как я получила образовательный кредит, чтобы поступить в Санкт-Петербургский государственный университет. Родом я из Южной Осетии, и для меня образование всегда было приоритетом.
+
+В моей родной стране доступ к высшему образованию был ограничен, и мне всегда мечталось поступить в престижный университет за пределами моей родины. Однако финансовые возможности моей семьи были ограничены, и я понимала, что без финансовой поддержки будет трудно осуществить мою мечту.
+
+Я решила обратиться за помощью к финансовым учреждениям, и мне посоветовали обратиться в банк, который предлагает образовательные кредиты. Я выбрала банк, который имел хорошую репутацию и гибкие условия кредитования для студентов.
+
+Первым шагом было заполнение заявки на образовательный кредит, где я указала свои личные данные, финансовую информацию и подробности о поступлении в Санкт-Петербургский государственный университет. Я предоставила все необходимые документы, включая подтверждение о приеме и расходы на обучение.
+
+После подачи заявки меня пригласили на собеседование, где я смогла рассказать о своих академических достижениях, мотивации и планах на будущее. Было важно продемонстрировать банку, что я серьезно отношусь к своему образованию и обладаю потенциалом для достижения успеха.
+
+Благодаря усилиям и поддержке моей семьи, а также решительности, я получила образовательный кредит от банка. Банк предоставил мне возможность финансировать свое образование на сумму, необходимую для оплаты учебных сборов, проживания и других расходов в Санкт-Петербурге.
+              </p>
+          </div>
+      </div>
+    </div>`;
+    }
+})
+})
+
 
 
